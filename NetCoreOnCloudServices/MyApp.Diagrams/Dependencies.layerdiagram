@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9f702240-dc6e-4e21-a6b2-ed4b7f6ad6e6" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="9c3e07be-2c99-4308-a9e2-f6e3af46d406" name="MyApp.WebAPI">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="cbb8e052-2889-433e-ba24-9f6ea354b036" direction="Forward">
+          <layerMoniker Id="496c98b5-01bd-4ef1-8d86-b11f85763a30" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="49beb177-8d24-466f-85a1-7a53ce207fbb" direction="Forward">
+          <layerMoniker Id="5487e4b6-e0c1-4c0d-9bd0-59366dc79d00" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="9bf02436-675b-4f90-9e52-557bc2023a43" name="MyApp.WebAPI">
+          <ArtifactNode Label="MyApp.WebAPI" Category="CodeSchema_Project" Id="(Assembly=../MyApp.WebAPI/MyApp.WebAPI.csproj)" />
+          <ExpandedNode Id="(Assembly=MyApp.WebAPI)" Label="MyApp.WebAPI.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="56527c1d-ab76-4425-94b7-fd598fbb302c" name="WebAPIRole">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d88c9baf-6887-42fd-b41b-8d42abf292ce" direction="Forward">
+          <layerMoniker Id="9c3e07be-2c99-4308-a9e2-f6e3af46d406" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d4f3c4b8-b387-4891-9606-15c959b196ac" direction="Forward">
+          <layerMoniker Id="fa7ed362-9f8f-4a82-81b9-a58be39b008c" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="2b9e58ba-f2d4-4908-90cc-68de927fe9c1" direction="Forward">
+          <layerMoniker Id="d1efe2f6-1c9d-47ba-96ba-4c154aad042a" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="1d4094ca-86fb-41be-a403-a24d7e9d84a0" name="WebAPIRole">
+          <ArtifactNode Label="WebAPIRole" Category="CodeSchema_Project" Id="(Assembly=../WebAPIRole/WebAPIRole.csproj)" />
+          <ExpandedNode Id="(Assembly=WebAPIRole)" Label="WebAPIRole.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="c7da3b8f-675a-42c1-979f-51eaa8b92b79" name="MyApp.CloudService">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b0ff08f7-f217-4d6a-b221-1e9931d931c6" direction="Forward">
+          <layerMoniker Id="56527c1d-ab76-4425-94b7-fd598fbb302c" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="361860da-042d-4230-98db-39601e3d068f" direction="Forward">
+          <layerMoniker Id="a4a778e1-b2e6-4ecc-a481-798c6e24b9b3" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="5dace681-da2f-4a8f-a50c-cb1320afcbcc" name="MyApp.CloudService">
+          <ArtifactNode Label="MyApp.CloudService" Category="CodeSchema_Project" Id="(Assembly=../MyApp.CloudService/MyApp.CloudService.ccproj)" />
+        </reference>
+      </references>
+    </layer>
+    <layer Id="fa7ed362-9f8f-4a82-81b9-a58be39b008c" name=".Net Framework" />
+    <layer Id="d1efe2f6-1c9d-47ba-96ba-4c154aad042a" name="Microsoft.WindowsAzure" />
+    <layer Id="5487e4b6-e0c1-4c0d-9bd0-59366dc79d00" name="Microsoft.NETCore" />
+    <layer Id="496c98b5-01bd-4ef1-8d86-b11f85763a30" name="Microsoft.AspNetCore" />
+    <layer Id="a4a778e1-b2e6-4ecc-a481-798c6e24b9b3" name="Cloud Services SDK" />
+  </layers>
+</layerModel>

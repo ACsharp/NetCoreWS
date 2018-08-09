@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="908ccb8c-29b6-4494-aa36-923022d0d737" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="1981bf28-b447-4ae1-8542-bbb5be313ec9" name="MyApp.WebAPI">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="f3b0f05f-ce1e-4f32-8586-08e847de605e" direction="Forward">
+          <layerMoniker Id="433abed0-6e16-4bba-aee8-1c8a8d15cd45" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="0c6b2cff-892d-499d-a5f6-cc8b607e6b92" direction="Forward">
+          <layerMoniker Id="c6ea3b02-2df6-435b-8ab3-089272e2a0d0" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="a3ce100a-1514-4031-baf9-47dee41030f6" name="The actual app code" />
+      </childLayers>
+      <references>
+        <reference Id="17b9a0e3-71ca-4dda-99d3-48e39dbd3cf8" name="MyApp.WebAPI">
+          <ArtifactNode Label="MyApp.WebAPI" Category="CodeSchema_Project" Id="(Assembly=../MyApp.WebAPI/MyApp.WebAPI.csproj)" />
+          <ExpandedNode Id="(Assembly=MyApp.WebAPI)" Label="MyApp.WebAPI.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="f1353a57-10c2-4d99-abec-9477f5b43250" name="WebAPIRole">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="16138032-af58-41cc-8163-69ee09a44609" direction="Forward">
+          <layerMoniker Id="1981bf28-b447-4ae1-8542-bbb5be313ec9" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="8cfc7663-b685-4f61-bdb1-39e4486e7c07" direction="Forward">
+          <layerMoniker Id="fda38a15-b575-42c8-be84-78202d434139" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="7ab77140-07d2-496d-b1d0-e0c34e52b7b3" direction="Forward">
+          <layerMoniker Id="50eb73e5-3946-4679-96ad-827028715bd5" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="e4c9da6d-d641-4ddd-9f09-7cee5382e200" name="Startup scripts">
+          <childLayers>
+            <layer Id="ca8f50f7-2d0a-4365-8c60-8bcba810cc63" name="Configure IIS" />
+            <layer Id="d1aa4b80-13aa-4885-b507-c11662d0186b" name="Install .Net Core" />
+          </childLayers>
+        </layer>
+        <layer Id="ac424a1d-efea-4e29-b716-068da3b60847" name="Project file hacks">
+          <childLayers>
+            <layer Id="2cca86b0-d352-4fa3-9988-1b9e7a90b388" name="Build target app" />
+            <layer Id="b69437c8-32ad-4d6b-97ea-798cd2f5ff37" name="Include build output as a content" />
+          </childLayers>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="1fe430c5-1344-4630-a20b-50a6cc7ea872" name="WebAPIRole">
+          <ArtifactNode Label="WebAPIRole" Category="CodeSchema_Project" Id="(Assembly=../WebAPIRole/WebAPIRole.csproj)" />
+          <ExpandedNode Id="(Assembly=WebAPIRole)" Label="WebAPIRole.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="76ccb340-5e53-43ac-8cf9-8995aaf1c026" name="MyApp.CloudService">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="395ecbdf-e05d-49bf-9ba5-580b24afe117" direction="Forward">
+          <layerMoniker Id="f1353a57-10c2-4d99-abec-9477f5b43250" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="134dd051-f163-4aa8-afc5-a831c177995b" direction="Forward">
+          <layerMoniker Id="d0a495ad-1a61-4756-90df-e1106502c70b" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="6001acea-dc3d-4c32-a9fd-2f20d6d3372c" name="Standard CloudService project with minor hacks" />
+      </childLayers>
+      <references>
+        <reference Id="0a5d786c-a94b-4371-8d98-823dfa0f123c" name="MyApp.CloudService">
+          <ArtifactNode Label="MyApp.CloudService" Category="CodeSchema_Project" Id="(Assembly=../MyApp.CloudService/MyApp.CloudService.ccproj)" />
+        </reference>
+      </references>
+    </layer>
+    <layer Id="fda38a15-b575-42c8-be84-78202d434139" name=".Net Framework" />
+    <layer Id="50eb73e5-3946-4679-96ad-827028715bd5" name="Microsoft.WindowsAzure" />
+    <layer Id="c6ea3b02-2df6-435b-8ab3-089272e2a0d0" name="Microsoft.NETCore" />
+    <layer Id="433abed0-6e16-4bba-aee8-1c8a8d15cd45" name="Microsoft.AspNetCore" />
+    <layer Id="d0a495ad-1a61-4756-90df-e1106502c70b" name="Cloud Services SDK" />
+  </layers>
+</layerModel>

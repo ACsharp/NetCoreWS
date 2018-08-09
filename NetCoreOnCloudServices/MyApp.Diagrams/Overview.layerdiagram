@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="2b6d67fa-cd4c-4b5a-92a8-5fc31abbba1a" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="ac919677-03ae-4347-a149-c5a201c66725" name="MyApp.WebAPI">
+      <references>
+        <reference Id="97b1ea66-7486-446d-b44d-91c7758b7cfe" name="MyApp.WebAPI">
+          <ArtifactNode Label="MyApp.WebAPI" Category="CodeSchema_Project" Id="(Assembly=../MyApp.WebAPI/MyApp.WebAPI.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MyApp.WebAPI)" Label="MyApp.WebAPI.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="e2167f82-d1e4-4594-961d-4c84f2e698f7" name="WebAPIRole">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="c95ba30c-edfa-420c-899f-b83506d17687" direction="Forward">
+          <layerMoniker Id="ac919677-03ae-4347-a149-c5a201c66725" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="d12c792e-4754-4641-86c2-a907cc20b32a" name="WebAPIRole">
+          <ArtifactNode Label="WebAPIRole" Category="CodeSchema_Project" Id="(Assembly=../WebAPIRole/WebAPIRole.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=WebAPIRole)" Label="WebAPIRole.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="4ad3da34-33fb-42fe-946b-67eab570d2d3" name="MyApp.CloudService">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="037a1b1c-f342-46b4-82d1-9b7349bc7062" direction="Forward">
+          <layerMoniker Id="e2167f82-d1e4-4594-961d-4c84f2e698f7" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="6c477b86-b78d-474f-8049-94414c5a0faf" name="MyApp.CloudService">
+          <ArtifactNode Label="MyApp.CloudService" Category="CodeSchema_Project" Id="(Assembly=../MyApp.CloudService/MyApp.CloudService.ccproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
